@@ -34,7 +34,7 @@
                     <a href="/" class="text-gray-600 hover:text-gray-900 transition {{ request()->routeIs('home') ? 'text-gray-900 font-medium' : '' }}">خانه</a>
                     <a href="{{ route('songs.index') }}" class="text-gray-600 hover:text-gray-900 transition">آهنگ‌ها</a>
                     <a href="{{ route('categories.index') }}" class="text-gray-600 hover:text-gray-900 transition">دسته‌بندی‌ها</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">هنرمندان</a>
+                    <a href="artists" class="text-gray-600 hover:text-gray-900 transition">هنرمندان</a>
                 </div>
                 
                 <!-- بخش کاربری -->

@@ -6,16 +6,27 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\ArtistController as AdminArtistController;
+use App\Http\Controllers\Admin\SongController as AdminSongController;
+
 
 use App\Http\Controllers\HomeController;
+
+
 use App\Http\Controllers\Front\SongController as FrontSongController;
-use App\Http\Controllers\Admin\SongController as AdminSongController;
+use App\Http\Controllers\Front\ArtistController as FrontArtistController;
 use App\Http\Controllers\Front\CategoryController as FrontCategoryController;
+
 use Illuminate\Support\Facades\Route;
 #...
 Route::get('/categories', [FrontCategoryController::class, 'index'])->name('categories.index');
 #...
 Route::get('/category/{slug}', [FrontCategoryController::class, 'show'])->name('categories.show');
+#...
+Route::get('/artists',[FrontArtistController::class,'index'])->name('artists.index');
+#...
+Route::get('/artist/{slug}', [FrontArtistController::class, 'show'])->name('artists.show');
+#...
+Route::get('/api/artists/search', [FrontArtistController::class, 'search'])->name('api.artists.search');
 #...
 Route::get('/',[HomeController::class,'index']);
 #...

@@ -25,7 +25,7 @@ class Artist extends Model
 
     public function songs(){
 
-        $this->hasMany(Song::class);
+        return $this->hasMany(Song::class);
 
     }
 
@@ -67,5 +67,10 @@ protected static function generateUniqueSlug($name)
    public static function getPaginatedArtists($limit = 10)
 {
     return self::query()->active()->orderBy('name')->paginate($limit);
+}
+
+public static function getArtist($slug)
+{
+    return self::query()->active()->where('id',$slug);
 }
 }
