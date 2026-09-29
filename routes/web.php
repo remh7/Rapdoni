@@ -43,27 +43,6 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::resource('artists',AdminArtistController::class)->names('admin.artists');
 });
 
-
-Route::get('/contact',[ContactController::class,'create']);
-
-Route::get('/about',function(){
-return view('about');
-});
-Route::get('/upload', [FileController::class, 'create'])
-    ->name('files.show');
-
-Route::get('/f/{token}', [FileController::class, 'publicDownload'])
-    ->name('files.public.download');
-
-// ذخیره فایل آپلود شده
-Route::post('/upload', [FileController::class, 'store'])
-    ->name('files.store');
-
-// ذخیره کامنت
-Route::post('/contact',[ContactController::class,'store'])->name('contact.store');
-
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -29,7 +29,7 @@
                     <span class="text-xl font-bold text-gray-800">رپدونی</span>
                 </a>
                 
-                <!-- منوی اصلی -->
+                <!-- منوی اصلی (دسکتاپ) -->
                 <div class="hidden md:flex items-center gap-6">
                     <a href="/" class="text-gray-600 hover:text-gray-900 transition {{ request()->routeIs('home') ? 'text-gray-900 font-medium' : '' }}">خانه</a>
                     <a href="{{ route('songs.index') }}" class="text-gray-600 hover:text-gray-900 transition">آهنگ‌ها</a>
@@ -37,7 +37,7 @@
                     <a href="artists" class="text-gray-600 hover:text-gray-900 transition">هنرمندان</a>
                 </div>
                 
-                <!-- بخش کاربری -->
+                <!-- بخش کاربری + دکمه همبرگری -->
                 <div class="flex items-center gap-3">
                     @auth
                         <div class="relative group">
@@ -81,7 +81,24 @@
                         <a href="{{ route('login') }}" class="text-gray-600 hover:text-gray-900 transition text-sm">ورود</a>
                         <a href="{{ route('register') }}" class="px-3 py-1.5 bg-gray-800 text-white rounded-md text-sm hover:bg-gray-700 transition">ثبت‌نام</a>
                     @endauth
+                    
+                    <!-- دکمه همبرگری موبایل -->
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-gray-900 transition p-1" aria-label="باز کردن منو">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
                 </div>
+            </div>
+        </div>
+        
+        <!-- منوی موبایل -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4 space-y-1">
+                <a href="/" class="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition py-2 px-3 {{ request()->routeIs('home') ? 'text-gray-900 font-medium bg-gray-50' : '' }}">خانه</a>
+                <a href="{{ route('songs.index') }}" class="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition py-2 px-3">آهنگ‌ها</a>
+                <a href="{{ route('categories.index') }}" class="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition py-2 px-3">دسته‌بندی‌ها</a>
+                <a href="artists" class="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition py-2 px-3">هنرمندان</a>
             </div>
         </div>
     </nav>
@@ -169,6 +186,38 @@
             </div>
         </div>
     </footer>
+    
+    <!-- اسکریپت منوی موبایل -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            if (btn && menu && icon) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                    
+                    if (menu.classList.contains('hidden')) {
+                        icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                    } else {
+                        icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                    }
+                });
+                
+                // بستن منو با کلیک بیرون
+                document.addEventListener('click', function(e) {
+                    if (!menu.classList.contains('hidden') && 
+                        !menu.contains(e.target) && 
+                        !btn.contains(e.target)) {
+                        menu.classList.add('hidden');
+                        icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                    }
+                });
+            }
+        });
+    </script>
     
     @stack('scripts')
 </body>

@@ -79,7 +79,6 @@ class CategoryController extends Controller
 
     public function destroy(Category $category)
     {
-        // بررسی کن آهنگ دارد یا نه
         if ($category->songs()->count() > 0) {
             return back()->with('error', 'این دسته‌بندی دارای آهنگ است، اول آهنگ‌ها رو حذف کن');
         }

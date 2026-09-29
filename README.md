@@ -1,59 +1,292 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎵 رپدونی | Rapdoni
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**رپدونی** یک وب‌سایت موسیقی مبتنی بر **Laravel** است که با هدف ارائه و مدیریت آهنگ‌های مختلف در دسته بندی های متفاوت طراحی شده است.
 
-## About Laravel
+این پروژه دارای بخش کاربری برای مشاهده، جستجو، پخش و دانلود آهنگ‌ها و همچنین یک **پنل مدیریت** برای مدیریت آهنگ‌ها، خواننده‌ها و دسته‌بندی‌ها است.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ امکانات
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 👤 بخش کاربران
 
-## Learning Laravel
+* 🏠 صفحه اصلی با نمایش جدیدترین آهنگ‌ها
+* 🔥 نمایش پربازدیدترین آهنگ‌ها
+* 🔎 جستجوی آهنگ، خواننده و آلبوم
+* 🎵 مشاهده جزئیات آهنگ
+* ▶️ پخش آنلاین آهنگ با پلیر HTML5
+* ⬇️ دانلود آهنگ
+* 🎤 مشاهده لیست خواننده‌ها
+* 📂 مشاهده دسته‌بندی‌های موسیقی
+* 🔍 جستجوی خواننده‌ها
+* 👤 مدیریت پروفایل کاربر
+* 🔐 سیستم ورود و ثبت‌نام
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## در صفحه اصلی، جدیدترین آهنگ‌ها و آهنگ‌های پربازدید به همراه نام آهنگ، خواننده و تعداد پخش نمایش داده می‌شوند.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🛠️ پنل مدیریت
 
-## Laravel Sponsors
+پنل مدیریت پروژه در مسیر `/admin` قرار دارد و برای دسترسی به آن احراز هویت و سطح دسترسی ادمین مورد نیاز است.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+امکانات پنل مدیریت:
 
-### Premium Partners
+* 📊 داشبورد مدیریت
+* 🎵 مدیریت آهنگ‌ها
+* 🎤 مدیریت خواننده‌ها
+* 📂 مدیریت دسته‌بندی‌ها
+* ➕ ایجاد رکورد جدید
+* ✏️ ویرایش اطلاعات
+* 🗑️ حذف اطلاعات
+* 👀 مشاهده اطلاعات
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🎧 پخش آنلاین
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+پروژه دارای یک پلیر ساده مبتنی بر **HTML5 Audio** است که در پایین صفحه نمایش داده می‌شود.
 
-## Code of Conduct
+## کاربر می‌تواند آهنگ را پخش کرده و عنوان آهنگ و نام خواننده را مشاهده کند. همچنین هنگام پخش آهنگ، درخواست ثبت تعداد پخش برای سرور ارسال می‌شود.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🔎 جستجو
 
-## Security Vulnerabilities
+امکان جستجوی آهنگ‌ها از طریق صفحه اصلی وجود دارد.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+کاربر می‌تواند با استفاده از عبارت جستجو، نتایج مرتبط را مشاهده کند:
 
-## License
+* نام آهنگ
+* نام خواننده
+* آلبوم
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+صفحه اصلی عبارت جستجو را به مسیر لیست آهنگ‌ها ارسال می‌کند.
+
+---
+
+## 📂 دسته‌بندی‌ها
+
+آهنگ‌ها می‌توانند در دسته‌بندی‌های مختلف قرار بگیرند.
+
+کاربر می‌تواند دسته‌بندی موردنظر خود را انتخاب کرده و آهنگ‌های مرتبط با آن را مشاهده کند.
+
+---
+
+## 🛣️ مسیرهای اصلی پروژه
+
+### بخش عمومی
+
+| مسیر                  | توضیح              |
+| --------------------- | ------------------ |
+| `/`                   | صفحه اصلی          |
+| `/songs`              | لیست آهنگ‌ها       |
+| `/song/{id}`          | جزئیات آهنگ        |
+| `/download/{id}`      | دانلود آهنگ        |
+| `/categories`         | لیست دسته‌بندی‌ها  |
+| `/category/{slug}`    | نمایش یک دسته‌بندی |
+| `/artists`            | لیست خواننده‌ها    |
+| `/artist/{slug}`      | نمایش یک خواننده   |
+| `/api/artists/search` | جستجوی خواننده‌ها  |
+
+### پنل مدیریت
+
+تمام مسیرهای مدیریت زیر prefix زیر قرار دارند:
+
+```text
+/admin
+```
+
+و دسترسی به آن‌ها نیازمند middlewareهای:
+
+```text
+auth
+admin
+```
+
+است.
+
+مسیرهای اصلی پنل:
+
+```text
+/admin/dashboard
+/admin/songs
+/admin/categories
+/admin/artists
+```
+
+---
+
+## 🔐 احراز هویت
+
+پروژه دارای سیستم احراز هویت کاربران است و مسیرهای مربوط به Authentication از فایل زیر بارگذاری می‌شوند:
+
+```php
+require __DIR__.'/auth.php';
+```
+
+همچنین بخش پروفایل کاربران تنها برای کاربران واردشده قابل دسترسی است.
+
+---
+
+## 🧰 تکنولوژی‌های استفاده شده
+
+* **PHP**
+* **Laravel**
+* **Laravel Blade**
+* **Laravel Eloquent**
+* **MySQL / Database**
+* **HTML5**
+* **JavaScript**
+* **Tailwind CSS**
+* **HTML5 Audio API**
+* **Git / GitHub**
+
+---
+
+## 📁 ساختار کلی
+
+ساختار پروژه بر اساس معماری Laravel طراحی شده و بخش‌های اصلی شامل موارد زیر هستند:
+
+```text
+app/
+├── Http/
+│   └── Controllers/
+│       ├── Admin/
+│       │   ├── DashboardController
+│       │   ├── CategoryController
+│       │   ├── ArtistController
+│       │   └── SongController
+│       │
+│       ├── Front/
+│       │   ├── CategoryController
+│       │   ├── ArtistController
+│       │   └── SongController
+│       │
+│       ├── HomeController
+│       ├── ProfileController
+│       ├── FileController
+│      
+│
+resources/
+├── views/
+│   └── ...
+│
+routes/
+├── web.php
+└── auth.php
+```
+
+---
+
+## ⚙️ نصب و راه‌اندازی
+
+ابتدا Repository را Clone کنید:
+
+```bash
+git clone https://github.com/USERNAME/REPOSITORY.git
+```
+
+و وارد پوشه پروژه شوید:
+
+```bash
+cd REPOSITORY
+```
+
+سپس وابستگی‌های PHP را نصب کنید:
+
+```bash
+composer install
+```
+
+فایل تنظیمات محیطی را ایجاد کنید:
+
+```bash
+cp .env.example .env
+```
+
+سپس Application Key را ایجاد کنید:
+
+```bash
+php artisan key:generate
+```
+
+اطلاعات دیتابیس را در فایل `.env` وارد کنید:
+
+```env
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+سپس Migrationها را اجرا کنید:
+
+```bash
+php artisan migrate
+```
+
+در صورت وجود Seeder:
+
+```bash
+php artisan db:seed
+```
+
+برای ساخت لینک فایل‌های Storage:
+
+```bash
+php artisan storage:link
+```
+
+در نهایت پروژه را اجرا کنید:
+
+```bash
+php artisan serve
+```
+
+پروژه از طریق آدرس زیر قابل دسترسی خواهد بود:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## 🖼️ صفحه اصلی
+
+صفحه اصلی شامل بخش‌های زیر است:
+
+* معرفی سایت
+* جستجو
+* جدیدترین آهنگ‌ها
+* پربازدیدترین آهنگ‌ها
+* دسته‌بندی‌ها
+* پلیر موسیقی
+
+رابط صفحه اصلی با Blade پیاده‌سازی شده و برای نمایش اطلاعات آهنگ‌ها از داده‌های سمت سرور استفاده می‌کند.
+
+---
+
+## 👨‍💻 توسعه‌دهنده
+
+**Developer:** `remh7`
+
+---
+
+
+## 📚 هدف پروژه
+
+این پروژه با هدف **یادگیری، تمرین و آشنایی با Laravel و توسعه وب** ساخته شده است.
+
+این Repository صرفاً یک نمونه آموزشی است و می‌تواند برای موارد زیر مورد استفاده قرار گیرد:
+
+* آشنایی با ساختار پروژه‌های Laravel
+* یادگیری Routing و Controllerها
+* آشنایی با Blade و ساخت صفحات وب
+* مطالعه نحوه پیاده‌سازی پنل مدیریت
+* بررسی نحوه مدیریت آهنگ‌ها، خواننده‌ها و دسته‌بندی‌ها
+* الگوبرداری برای یادگیری و توسعه پروژه‌های شخصی
+
+### ⚠️ توجه
+
+این پروژه به‌عنوان یک **محصول آماده برای استفاده در محیط واقعی یا تجاری** ارائه نشده است.
+
+کدها صرفاً با هدف آموزش، تمرین و مطالعه منتشر شده‌اند و ممکن است از نظر امنیت، بهینه‌سازی، مقیاس‌پذیری و استانداردهای Production نیاز به تغییر و توسعه داشته باشند.
+
+استفاده از ساختار و کدهای پروژه برای **یادگیری و الگوبرداری آموزشی** بلامانع است؛ با این حال توصیه می‌شود قبل از استفاده در یک پروژه واقعی، کدها بررسی، اصلاح و متناسب با نیازهای پروژه بازطراحی شوند.
+

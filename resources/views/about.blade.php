@@ -25,8 +25,7 @@
             <div class="mb-16">
                     <div class="bg-gray-900/60 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-indigo-500/10">
                         <p class="text-gray-300 leading-relaxed">
-                        هدف طراحی این وبسایت ایجاد یک پلتفرم داخلی آپلود فایل با رابط کاربری شیک و جذاب
-                        و با سرعت بالا به صورت رایگان و همیشه در دسترس کاربران میباشد
+                   ...
                         </p>
                     </div>
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'ملودی‌ها') }} - @yield('title')</title>
+    <title>{{ config('app.name', 'رپدونی') }} - @yield('title')</title>
 
 
     <!-- Scripts -->
@@ -26,7 +26,7 @@
                     <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
                 </svg>
             </div>
-            <h1 class="text-2xl font-bold text-gray-800">ملودی‌ها</h1>
+            <h1 class="text-2xl font-bold text-gray-800">رپدونی</h1>
             <p class="text-gray-400 text-sm mt-1">به جمع ما بپیوندید</p>
         </div>
         
@@ -37,7 +37,7 @@
         
         <!-- فوتر -->
         <div class="text-center mt-6 text-gray-400 text-xs">
-            <p>© 2024 ملودی‌ها - تمامی حقوق محفوظ است</p>
+            <p>© رپدونی - تمامی حقوق محفوظ است</p>
         </div>
     </div>
 </body>
